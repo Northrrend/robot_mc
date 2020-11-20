@@ -71,13 +71,6 @@ def pyramid(name, n):
                 mc.setBlock(x_int-k-i, y + i, z_int-j-i, block.Block(24))
 
 
-
-#my_id = mc.getPlayerEntityId('tony')
-#pos = mc.entity.getPos(my_id)
-#print pos.x, pos.y, pos.z
-
-#mc.setBlock(x, y, z, block.Block(24))
-
 #my_pos(me)
 #player_ls()
 #assemble(me)
