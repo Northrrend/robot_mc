@@ -8,3 +8,7 @@ java -Xms1G -Xmx1G -jar Minecraft_Server.jar
 
 pip download -d d:\mcpi mcpi  
 pip install --no-index --find-links=mcpi/ mcpi  
+
+4711  
+25565  
+25575  
