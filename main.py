@@ -1,8 +1,10 @@
 import mcpi.minecraft as minecraft
 import mcpi.block as block
 
-mc = minecraft.Minecraft.create("192.168.199.195")
-me = 'xjq'
+
+server2 = 'mc.xjqpro.com'
+me = 'XJQ'
+mc = minecraft.Minecraft.create(server2)
 
 
 def my_pos(name):
@@ -39,19 +41,11 @@ def prepare(name, r):
     z = int(my_tilepos.z)
     x0 = x - r
     z0 = z - r
-    y0 = y + 1
+    y0 = 0
     x1 = x + r
     z1 = z + r
     y1 = y + 100
     mc.setBlocks(x0, y0, z0, x1, y1, z1, block.Block(0))
-
-
-#AIR                 = Block(0)
-#STONE               = Block(1)
-#GRASS               = Block(2)
-#DIRT                = Block(3)
-#SAND                = Block(12)
-#SANDSTONE           = Block(24)
 
 
 def pyramid(name, n):
@@ -71,8 +65,31 @@ def pyramid(name, n):
                 mc.setBlock(x_int-k-i, y + i, z_int-j-i, block.Block(24))
 
 
-#my_pos(me)
+def ball(name, r):
+    mc.postToChat('Create a ball')
+    my_id = mc.getPlayerEntityId(name)
+    my_tilepos = mc.entity.getTilePos(my_id)
+    x = int(my_tilepos.x)
+    y = int(my_tilepos.y)
+    z = int(my_tilepos.z)
+    x_int = x - r
+    z_int = z + 2*r + 5
+    y_int = 0
+    x_c = x
+    y_c = r
+    z_c = z + r + 5
+    for i in range(r*2):
+        for j in range(r*2):
+            for k in range(r*2):
+                if ((x_int+k - x_c)**2 + (y_int+i - y_c)**2 + (z_int-j - z_c)**2) <= r**2:
+                    mc.setBlock(x_int+k, y_int+i, z_int+j, block.Block(1))
+
+
+
+my_pos(me)
 #player_ls()
 #assemble(me)
 #prepare(me, 100)
-#pyramid(me, 50)
+#pyramid(me, 30)
+#ball(me, 20)
+
