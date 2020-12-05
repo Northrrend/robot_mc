@@ -12,6 +12,7 @@ my_tilepos = mc.entity.getTilePos(my_id)
 x = int(my_tilepos.x)
 y = int(my_tilepos.y)
 z = int(my_tilepos.z)
+r=10
 x_int = x - r
 z_int = z + 2*r + 5
 y_int = 0
