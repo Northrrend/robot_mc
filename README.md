@@ -2,12 +2,14 @@
 
 # Block
 
+```
 AIR                 0  
 STONE               1  
 GRASS               2  
 DIRT                3  
 SAND                12  
 SANDSTONE           24  
+```
 
 # Server
 
@@ -23,7 +25,6 @@ port 25575
 pip download -d d:\mcpi mcpi  
 pip install --no-index --find-links=mcpi/ mcpi  
 
-<<<<<<< HEAD
 # Reference
 
 https://github.com/TeachCraft/TeachCraft-Server  
