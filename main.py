@@ -3,7 +3,7 @@ import mcpi.block as block
 
 
 server2 = 'mc.xjqpro.com'
-me = 'XJQ'
+me = 'tony'
 mc = minecraft.Minecraft.create(server2)
 
 
@@ -17,7 +17,7 @@ def player_ls():
     player_list = mc.getPlayerEntityIds()
     for player in player_list:
         pos = mc.entity.getPos(player)
-        print str(player) + ' at (' + str(pos.x) + ' , ' + str(pos.y) + ' , ' + str(pos.z) + ')'
+        print (str(player) + ' at (' + str(pos.x) + ' , ' + str(pos.y) + ' , ' + str(pos.z) + ')')
 
 
 def assemble(name):
