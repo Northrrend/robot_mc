@@ -13,17 +13,21 @@ SANDSTONE           24
 
 # Server
 
+```
 zypper in openjdk-1_8_0  
 update-alternertive -config java  
 java -Xms1G -Xmx1G -jar Minecraft_Server.jar 
 port 4711
 port 25565
 port 25575 
+```
 
 # Client
 
+```
 pip download -d d:\mcpi mcpi  
 pip install --no-index --find-links=mcpi/ mcpi  
+```
 
 # Reference
 
