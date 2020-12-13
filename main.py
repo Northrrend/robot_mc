@@ -10,7 +10,7 @@ mc = minecraft.Minecraft.create(server2)
 def my_pos(name):
     my_id = mc.getPlayerEntityId(name)
     pos = mc.entity.getPos(my_id)
-    print pos.x, pos.y, pos.z
+    print(pos.x, pos.y, pos.z)
 
 
 def player_ls():
